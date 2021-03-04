@@ -7,10 +7,14 @@
 
 #import "GTDetailViewController.h"
 #import <WebKit/WebKit.h>
+#import "GTScreen.h"
 @interface GTDetailViewController ()<WKNavigationDelegate>
 
 @property (nonatomic, strong) WKWebView * webView;
 @property (nonatomic, strong) UIProgressView * progressView;
+
+@property (nonatomic, strong) NSString * articleUrl;
+
 
 @end
 
@@ -20,20 +24,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height - 88)];
+    self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, STATUSBARHEIGHT + 44, self.view.frame.size.width, self.view.frame.size.height - STATUSBARHEIGHT - 44)];
     self.webView.navigationDelegate = self;
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://time.geekbang.org/dashboard/course"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.articleUrl]]];
     [self.view addSubview:self.webView];
     
     [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     
     
     [self.view addSubview:({
-        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, 20)];
+        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, STATUSBARHEIGHT + 44, self.view.frame.size.width, 20)];
         self.progressView;
     })];
     
 }
+
+-(instancetype)initWithUrlString:(NSString *)urlString{
+    self = [super init];
+    if (self) {
+        self.articleUrl = urlString;
+    }
+    return self;
+}
+
 
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
     self.progressView.hidden = YES;

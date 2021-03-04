@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7028F26425EE236200AA1D03 /* GTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028F26325EE236200AA1D03 /* GTVideoPlayer.m */; };
+		70585D3925E5F6A90071E900 /* GTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 70585D3825E5F6A90071E900 /* GTMediator.m */; };
+		706A98C825EF1EA400BC4F7B /* GTVideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 706A98C725EF1EA400BC4F7B /* GTVideoToolbar.m */; };
+		706A98CF25EF3B4900BC4F7B /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 706A98CE25EF3B4900BC4F7B /* GTScreen.m */; };
 		707E0E0625CA556F0088B375 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E0E0525CA556F0088B375 /* AppDelegate.m */; };
-		707E0E0925CA556F0088B375 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E0E0825CA556F0088B375 /* SceneDelegate.m */; };
-		707E0E0C25CA556F0088B375 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E0E0B25CA556F0088B375 /* ViewController.m */; };
-		707E0E0F25CA556F0088B375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707E0E0D25CA556F0088B375 /* Main.storyboard */; };
+		707E0E0C25CA556F0088B375 /* GTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E0E0B25CA556F0088B375 /* GTNewsViewController.m */; };
 		707E0E1125CA55700088B375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707E0E1025CA55700088B375 /* Assets.xcassets */; };
 		707E0E1425CA55700088B375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707E0E1225CA55700088B375 /* LaunchScreen.storyboard */; };
 		707E0E1725CA55700088B375 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E0E1625CA55700088B375 /* main.m */; };
 		707E0E2125CA55700088B375 /* SampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E0E2025CA55700088B375 /* SampleAppTests.m */; };
 		707E0E2C25CA55700088B375 /* SampleAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E0E2B25CA55700088B375 /* SampleAppUITests.m */; };
+		7085FB2F25DFA1A900C2049D /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7085FB2E25DFA1A900C2049D /* GTVideoViewController.m */; };
+		70ABE0A325CBD6C700A665D8 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 70ABE0A225CBD6C700A665D8 /* icon.bundle */; };
+		70B9B7CC25ECE10700ED0568 /* GTVideoCoverViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B9B7CB25ECE10700ED0568 /* GTVideoCoverViewCollectionViewCell.m */; };
+		70BF60A225E0E3E70068E995 /* GTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF60A125E0E3E70068E995 /* GTRecommendViewController.m */; };
+		70BF60C625E356FA0068E995 /* GTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF60C525E356FA0068E995 /* GTDetailViewController.m */; };
+		70BF60E125E3644A0068E995 /* GTDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF60E025E3644A0068E995 /* GTDeleteCellView.m */; };
+		70BF60F125E3A1040068E995 /* GTListLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF60F025E3A1040068E995 /* GTListLoad.m */; };
+		70BF612425E4DA0C0068E995 /* GTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF612325E4DA0C0068E995 /* GTListItem.m */; };
+		70BF614425E4E2E40068E995 /* GTNormalTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 70BF60D925E361000068E995 /* GTNormalTableViewCell.h */; };
+		70BF614525E4E2E40068E995 /* GTNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF60DA25E361000068E995 /* GTNormalTableViewCell.m */; };
+		7D38B7DA6B15CFD4549DEE47 /* libPods-SampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E67906EE39AE6C81E81D51D /* libPods-SampleApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +49,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E67906EE39AE6C81E81D51D /* libPods-SampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7028F26225EE236200AA1D03 /* GTVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoPlayer.h; sourceTree = "<group>"; };
+		7028F26325EE236200AA1D03 /* GTVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoPlayer.m; sourceTree = "<group>"; };
+		70585D3725E5F6A90071E900 /* GTMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMediator.h; sourceTree = "<group>"; };
+		70585D3825E5F6A90071E900 /* GTMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMediator.m; sourceTree = "<group>"; };
+		706A98C625EF1EA400BC4F7B /* GTVideoToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoToolbar.h; sourceTree = "<group>"; };
+		706A98C725EF1EA400BC4F7B /* GTVideoToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoToolbar.m; sourceTree = "<group>"; };
+		706A98CD25EF3B4900BC4F7B /* GTScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTScreen.h; sourceTree = "<group>"; };
+		706A98CE25EF3B4900BC4F7B /* GTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
 		707E0E0125CA556F0088B375 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		707E0E0425CA556F0088B375 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		707E0E0525CA556F0088B375 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		707E0E0725CA556F0088B375 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		707E0E0825CA556F0088B375 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		707E0E0A25CA556F0088B375 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		707E0E0B25CA556F0088B375 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		707E0E0E25CA556F0088B375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		707E0E0A25CA556F0088B375 /* GTNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNewsViewController.h; sourceTree = "<group>"; };
+		707E0E0B25CA556F0088B375 /* GTNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNewsViewController.m; sourceTree = "<group>"; };
 		707E0E1025CA55700088B375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		707E0E1325CA55700088B375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		707E0E1525CA55700088B375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +73,25 @@
 		707E0E2725CA55700088B375 /* SampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		707E0E2B25CA55700088B375 /* SampleAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleAppUITests.m; sourceTree = "<group>"; };
 		707E0E2D25CA55700088B375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7085FB2D25DFA1A900C2049D /* GTVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoViewController.h; sourceTree = "<group>"; };
+		7085FB2E25DFA1A900C2049D /* GTVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoViewController.m; sourceTree = "<group>"; };
+		70ABE0A225CBD6C700A665D8 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
+		70B9B7CA25ECE10700ED0568 /* GTVideoCoverViewCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoCoverViewCollectionViewCell.h; sourceTree = "<group>"; };
+		70B9B7CB25ECE10700ED0568 /* GTVideoCoverViewCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoCoverViewCollectionViewCell.m; sourceTree = "<group>"; };
+		70BF60A025E0E3E70068E995 /* GTRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTRecommendViewController.h; sourceTree = "<group>"; };
+		70BF60A125E0E3E70068E995 /* GTRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTRecommendViewController.m; sourceTree = "<group>"; };
+		70BF60C425E356FA0068E995 /* GTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTDetailViewController.h; sourceTree = "<group>"; };
+		70BF60C525E356FA0068E995 /* GTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTDetailViewController.m; sourceTree = "<group>"; };
+		70BF60D925E361000068E995 /* GTNormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNormalTableViewCell.h; sourceTree = "<group>"; };
+		70BF60DA25E361000068E995 /* GTNormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNormalTableViewCell.m; sourceTree = "<group>"; };
+		70BF60DF25E3644A0068E995 /* GTDeleteCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTDeleteCellView.h; sourceTree = "<group>"; };
+		70BF60E025E3644A0068E995 /* GTDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTDeleteCellView.m; sourceTree = "<group>"; };
+		70BF60EF25E3A1040068E995 /* GTListLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListLoad.h; sourceTree = "<group>"; };
+		70BF60F025E3A1040068E995 /* GTListLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListLoad.m; sourceTree = "<group>"; };
+		70BF612225E4DA0C0068E995 /* GTListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListItem.h; sourceTree = "<group>"; };
+		70BF612325E4DA0C0068E995 /* GTListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListItem.m; sourceTree = "<group>"; };
+		721CEAA3AD166D3179772B42 /* Pods-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7F7E7E18D78834B4B1618BC5 /* Pods-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D38B7DA6B15CFD4549DEE47 /* libPods-SampleApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FE618F0F221CE5C70022C52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				721CEAA3AD166D3179772B42 /* Pods-SampleApp.debug.xcconfig */,
+				7F7E7E18D78834B4B1618BC5 /* Pods-SampleApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		707E0DF825CA556F0088B375 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +136,8 @@
 				707E0E1F25CA55700088B375 /* SampleAppTests */,
 				707E0E2A25CA55700088B375 /* SampleAppUITests */,
 				707E0E0225CA556F0088B375 /* Products */,
+				3FE618F0F221CE5C70022C52 /* Pods */,
+				F6641F389B625634C8056A8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,17 +154,17 @@
 		707E0E0325CA556F0088B375 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				70B9B7C625ECDE4F00ED0568 /* VideoController */,
+				70BF60EB25E396680068E995 /* NewsController */,
+				70ABE0A225CBD6C700A665D8 /* icon.bundle */,
 				707E0E0425CA556F0088B375 /* AppDelegate.h */,
 				707E0E0525CA556F0088B375 /* AppDelegate.m */,
-				707E0E0725CA556F0088B375 /* SceneDelegate.h */,
-				707E0E0825CA556F0088B375 /* SceneDelegate.m */,
-				707E0E0A25CA556F0088B375 /* ViewController.h */,
-				707E0E0B25CA556F0088B375 /* ViewController.m */,
-				707E0E0D25CA556F0088B375 /* Main.storyboard */,
 				707E0E1025CA55700088B375 /* Assets.xcassets */,
 				707E0E1225CA55700088B375 /* LaunchScreen.storyboard */,
 				707E0E1525CA55700088B375 /* Info.plist */,
 				707E0E1625CA55700088B375 /* main.m */,
+				70BF60A025E0E3E70068E995 /* GTRecommendViewController.h */,
+				70BF60A125E0E3E70068E995 /* GTRecommendViewController.m */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -137,6 +187,76 @@
 			path = SampleAppUITests;
 			sourceTree = "<group>";
 		};
+		70B9B7C625ECDE4F00ED0568 /* VideoController */ = {
+			isa = PBXGroup;
+			children = (
+				7085FB2D25DFA1A900C2049D /* GTVideoViewController.h */,
+				7085FB2E25DFA1A900C2049D /* GTVideoViewController.m */,
+				70B9B7CA25ECE10700ED0568 /* GTVideoCoverViewCollectionViewCell.h */,
+				70B9B7CB25ECE10700ED0568 /* GTVideoCoverViewCollectionViewCell.m */,
+				7028F26225EE236200AA1D03 /* GTVideoPlayer.h */,
+				7028F26325EE236200AA1D03 /* GTVideoPlayer.m */,
+				706A98C625EF1EA400BC4F7B /* GTVideoToolbar.h */,
+				706A98C725EF1EA400BC4F7B /* GTVideoToolbar.m */,
+			);
+			path = VideoController;
+			sourceTree = "<group>";
+		};
+		70BF60EB25E396680068E995 /* NewsController */ = {
+			isa = PBXGroup;
+			children = (
+				70BF612125E4D9960068E995 /* Controller */,
+				70BF612025E4D96D0068E995 /* Model */,
+				70BF611F25E4D9640068E995 /* View */,
+			);
+			path = NewsController;
+			sourceTree = "<group>";
+		};
+		70BF611F25E4D9640068E995 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70BF60D925E361000068E995 /* GTNormalTableViewCell.h */,
+				70BF60DA25E361000068E995 /* GTNormalTableViewCell.m */,
+				70BF60DF25E3644A0068E995 /* GTDeleteCellView.h */,
+				70BF60E025E3644A0068E995 /* GTDeleteCellView.m */,
+				706A98CD25EF3B4900BC4F7B /* GTScreen.h */,
+				706A98CE25EF3B4900BC4F7B /* GTScreen.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70BF612025E4D96D0068E995 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70BF60EF25E3A1040068E995 /* GTListLoad.h */,
+				70BF60F025E3A1040068E995 /* GTListLoad.m */,
+				70BF612225E4DA0C0068E995 /* GTListItem.h */,
+				70BF612325E4DA0C0068E995 /* GTListItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		70BF612125E4D9960068E995 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				707E0E0A25CA556F0088B375 /* GTNewsViewController.h */,
+				707E0E0B25CA556F0088B375 /* GTNewsViewController.m */,
+				70585D3725E5F6A90071E900 /* GTMediator.h */,
+				70585D3825E5F6A90071E900 /* GTMediator.m */,
+				70BF60C425E356FA0068E995 /* GTDetailViewController.h */,
+				70BF60C525E356FA0068E995 /* GTDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6641F389B625634C8056A8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E67906EE39AE6C81E81D51D /* libPods-SampleApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +264,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 707E0E3025CA55700088B375 /* Build configuration list for PBXNativeTarget "SampleApp" */;
 			buildPhases = (
+				BBF434D186ED2A91DFD8DC9D /* [CP] Check Pods Manifest.lock */,
 				707E0DFD25CA556F0088B375 /* Sources */,
 				707E0DFE25CA556F0088B375 /* Frameworks */,
 				707E0DFF25CA556F0088B375 /* Resources */,
@@ -241,7 +362,7 @@
 			files = (
 				707E0E1425CA55700088B375 /* LaunchScreen.storyboard in Resources */,
 				707E0E1125CA55700088B375 /* Assets.xcassets in Resources */,
-				707E0E0F25CA556F0088B375 /* Main.storyboard in Resources */,
+				70ABE0A325CBD6C700A665D8 /* icon.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,15 +382,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BBF434D186ED2A91DFD8DC9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		707E0DFD25CA556F0088B375 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				707E0E0C25CA556F0088B375 /* ViewController.m in Sources */,
+				706A98CF25EF3B4900BC4F7B /* GTScreen.m in Sources */,
+				70BF614425E4E2E40068E995 /* GTNormalTableViewCell.h in Sources */,
+				70BF614525E4E2E40068E995 /* GTNormalTableViewCell.m in Sources */,
+				70B9B7CC25ECE10700ED0568 /* GTVideoCoverViewCollectionViewCell.m in Sources */,
+				70BF60C625E356FA0068E995 /* GTDetailViewController.m in Sources */,
+				70585D3925E5F6A90071E900 /* GTMediator.m in Sources */,
+				707E0E0C25CA556F0088B375 /* GTNewsViewController.m in Sources */,
+				70BF612425E4DA0C0068E995 /* GTListItem.m in Sources */,
+				7028F26425EE236200AA1D03 /* GTVideoPlayer.m in Sources */,
 				707E0E0625CA556F0088B375 /* AppDelegate.m in Sources */,
+				70BF60F125E3A1040068E995 /* GTListLoad.m in Sources */,
+				706A98C825EF1EA400BC4F7B /* GTVideoToolbar.m in Sources */,
 				707E0E1725CA55700088B375 /* main.m in Sources */,
-				707E0E0925CA556F0088B375 /* SceneDelegate.m in Sources */,
+				70BF60A225E0E3E70068E995 /* GTRecommendViewController.m in Sources */,
+				70BF60E125E3644A0068E995 /* GTDeleteCellView.m in Sources */,
+				7085FB2F25DFA1A900C2049D /* GTVideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,14 +463,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		707E0E0D25CA556F0088B375 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				707E0E0E25CA556F0088B375 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		707E0E1225CA55700088B375 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,6 +588,7 @@
 		};
 		707E0E3125CA55700088B375 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721CEAA3AD166D3179772B42 /* Pods-SampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +607,7 @@
 		};
 		707E0E3225CA55700088B375 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F7E7E18D78834B4B1618BC5 /* Pods-SampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

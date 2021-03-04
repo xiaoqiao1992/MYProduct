@@ -9,10 +9,11 @@
 #import "GTNormalTableViewCell.h"
 #import "GTDeleteCellView.h"
 #import "GTListLoad.h"
+#import "GTDetailViewController.h"
 
 @interface GTNewsViewController ()<UITableViewDelegate,UITableViewDataSource,GTNormalTableViewCellDelegate>
 @property (nonatomic, strong) UITableView * tableView;
-@property (nonatomic, strong) NSMutableArray * dataArray;
+@property (nonatomic, strong) NSArray * dataArray;
 @property (nonatomic, strong) GTListLoad * listLoad;
 
 @end
@@ -31,11 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.dataArray = [NSMutableArray array];
-    for (int i = 0; i < 20; i++) {
-        [self.dataArray addObject:@(i)];
-    }
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     [self.tableView registerClass:[GTNormalTableViewCell class] forCellReuseIdentifier:@"GTNormalTableViewCell"];
     self.tableView.delegate = self;
@@ -43,7 +39,12 @@
     [self.view addSubview:self.tableView];
     
     self.listLoad = [[GTListLoad alloc] init];
-    [self.listLoad loadListData];
+    __weak typeof(self) wself = self;
+    [self.listLoad loadListDataWithFinishBlock:^(BOOL success, NSArray<GTListItem *> * _Nonnull dataArray) {
+        __strong typeof(self) strongSelf = wself;
+        strongSelf.dataArray = dataArray;
+        [strongSelf.tableView reloadData];
+    }];
 }
 
 
@@ -59,6 +60,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     GTNormalTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"GTNormalTableViewCell" forIndexPath:indexPath];
     cell.delegate = self;
+    [cell layoutTableViewCellWithItem:self.dataArray[indexPath.row]];
     return cell;
 }
 
@@ -71,10 +73,17 @@
     
     [view showFrame:rect.origin clickBlock:^{
         __strong typeof(self) strongSelf = wself;
-        [strongSelf.dataArray removeLastObject];
         [strongSelf.tableView deleteRowsAtIndexPaths:@[[strongSelf.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationRight];
     }];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    GTListItem * item = self.dataArray[indexPath.row];
+    GTDetailViewController * vc = [[GTDetailViewController alloc] initWithUrlString:item.articleUrl];
+    vc.title = [NSString stringWithFormat:@"%@",@(indexPath.row)];
+    [self.navigationController pushViewController:vc animated:YES];
     
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniquekey];
 }
 
 -(void)pushController{

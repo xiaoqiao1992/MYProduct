@@ -2,52 +2,145 @@
 //  GTNormalTableViewCell.m
 //  SampleApp
 //
-//  Created by QQ on 2021/2/22.
+//  Created by dequanzhu on 2019.
+//  Copyright © 2019 dequanzhu. All rights reserved.
 //
 
 #import "GTNormalTableViewCell.h"
+#import "GTListItem.h"
+#import "SDWebImage.h"
+#import "GTScreen.h"
+
+@interface GTNormalTableViewCell ()
+
+@property (nonatomic, strong, readwrite) UILabel *titleLabel;
+@property (nonatomic, strong, readwrite) UILabel *sourceLabel;
+@property (nonatomic, strong, readwrite) UILabel *commentLabel;
+@property (nonatomic, strong, readwrite) UILabel *timeLabel;
+
+@property (nonatomic, strong, readwrite) UIImageView *rightImageView;
+
+@property (nonatomic, strong, readwrite) UIButton *deleteButton;
+
+@end
 
 @implementation GTNormalTableViewCell
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+
         [self.contentView addSubview:({
-            UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(290, 80, 50, 20)];
-            button.layer.cornerRadius = 10;
-            button.layer.masksToBounds = YES;
-            button.layer.borderColor = [[UIColor grayColor] CGColor];
-            button.layer.borderWidth = 2;
-            
-            
-            [button setTitle:@"X" forState:UIControlStateNormal];
-            [button setTitle:@"V" forState:UIControlStateHighlighted];
-            button.backgroundColor = [UIColor blueColor];
-            [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-            button;
+            self.titleLabel = [[UILabel alloc] initWithFrame:UIRect(20, 15, 270, 50)];
+            self.titleLabel.font = [UIFont systemFontOfSize:16];
+            self.titleLabel.textColor = [UIColor blackColor];
+            self.titleLabel.numberOfLines = 2;
+            self.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+            self.titleLabel;
         })];
+
+        [self.contentView addSubview:({
+            self.sourceLabel = [[UILabel alloc] initWithFrame:UIRect(20, 70, 50, 20)];
+            self.sourceLabel.font = [UIFont systemFontOfSize:12];
+            self.sourceLabel.textColor = [UIColor grayColor];
+            self.sourceLabel;
+        })];
+
+        [self.contentView addSubview:({
+            self.commentLabel = [[UILabel alloc] initWithFrame:UIRect(100, 70, 50, 20)];
+            self.commentLabel.font = [UIFont systemFontOfSize:12];
+            self.commentLabel.textColor = [UIColor grayColor];
+            self.commentLabel;
+        })];
+
+        [self.contentView addSubview:({
+            self.timeLabel = [[UILabel alloc] initWithFrame:UIRect(150, 70, 50, 20)];
+            self.timeLabel.font = [UIFont systemFontOfSize:12];
+            self.timeLabel.textColor = [UIColor grayColor];
+            self.timeLabel;
+        })];
+
+        [self.contentView addSubview:({
+            self.rightImageView = [[UIImageView alloc] initWithFrame:UIRect(300, 15, 80, 70)];
+            self.rightImageView.contentMode = UIViewContentModeScaleAspectFit;
+            self.rightImageView;
+        })];
+
+//        [self.contentView addSubview:({
+//            self.deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(280, 70, 10,10)];
+//            [self.deleteButton setTitle:@"X" forState:UIControlStateNormal];
+//            [self.deleteButton setTitle:@"V" forState:UIControlStateHighlighted];
+//            [self.deleteButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+//            [self.deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
+//
+////            self.deleteButton.layer.cornerRadius = self.deleteButton.bounds.size.height / 2;
+////            self.deleteButton.layer.masksToBounds = YES;
+////            self.deleteButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+////            self.deleteButton.layer.borderWidth = 1;
+//
+//            self.deleteButton;
+//        })];
+        
+        
     }
     return self;
 }
 
-
--(void)buttonClick:(UIButton *)button{
-    NSLog(@"didCLICK");
-    if (self.delegate && [self.delegate respondsToSelector:@selector(tableViewCell:clickButton:)]) {
-        [self.delegate tableViewCell:self clickButton:button];
+- (void)layoutTableViewCellWithItem:(GTListItem *)item {
+    
+    BOOL hasRead = [[NSUserDefaults standardUserDefaults] boolForKey:item.uniquekey];
+    if (hasRead) {
+        self.titleLabel.textColor = [UIColor grayColor];
+    } else {
+        self.titleLabel.textColor = [UIColor blackColor];
     }
+
+    self.titleLabel.text = item.title;
+
+    self.sourceLabel.text = item.author_name;
+    [self.sourceLabel sizeToFit];
+
+    self.commentLabel.text = item.category;
+    [self.commentLabel sizeToFit];
+    self.commentLabel.frame = CGRectMake(self.sourceLabel.frame.origin.x + self.sourceLabel.frame.size.width + 15, self.commentLabel.frame.origin.y, self.commentLabel.frame.size.width, self.commentLabel.frame.size.height);
+
+    self.timeLabel.text = item.date;
+    [self.timeLabel sizeToFit];
+
+    self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + UI(15), self.timeLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
+
+
+
+//    NSThread * downloadImageThread = [[NSThread alloc] initWithBlock:^{
+//        UIImage * image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+//
+//
+//        self.rightImageView.image = image;
+//    }];
+//    downloadImageThread.name = @"downloadImageThread";
+//    [downloadImageThread start];
+  
+//    dispatch_queue_global_t downloadImageThread = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//
+//    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
+//    dispatch_async(downloadImageThread, ^{
+//        UIImage * image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+//        dispatch_async(mainQueue, ^{
+//            self.rightImageView.image = image;
+//        });
+//    });
+    
+    [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        NSLog(@"");
+    }];
+
+    
 }
 
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)deleteButtonClick {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tableViewCell:clickDeleteButton:)]) {
+        [self.delegate tableViewCell:self clickDeleteButton:self.deleteButton];
+    }
 }
 
 @end
