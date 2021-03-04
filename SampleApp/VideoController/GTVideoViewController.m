@@ -28,6 +28,7 @@
         self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x.png"];
     }
+    
     return self;
 }
 
