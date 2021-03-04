@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7023D33425F0C112003A8FE6 /* GTFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7023D33025F0BED7003A8FE6 /* GTFramework.framework */; };
+		7023D33525F0C112003A8FE6 /* GTFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7023D33025F0BED7003A8FE6 /* GTFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7023D33B25F0C850003A8FE6 /* GTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7023D33925F0C850003A8FE6 /* GTMineViewController.m */; };
+		7023D34225F0D209003A8FE6 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7023D33E25F0D1D4003A8FE6 /* TencentOpenAPI.framework */; };
+		7023D34825F0D23B003A8FE6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7023D34625F0D235003A8FE6 /* SystemConfiguration.framework */; };
+		7023D35525F0D50B003A8FE6 /* GTLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7023D35325F0D50B003A8FE6 /* GTLogin.m */; };
 		7028F26425EE236200AA1D03 /* GTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028F26325EE236200AA1D03 /* GTVideoPlayer.m */; };
 		70585D3925E5F6A90071E900 /* GTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 70585D3825E5F6A90071E900 /* GTMediator.m */; };
 		706A98C825EF1EA400BC4F7B /* GTVideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 706A98C725EF1EA400BC4F7B /* GTVideoToolbar.m */; };
@@ -28,6 +34,8 @@
 		70BF612425E4DA0C0068E995 /* GTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF612325E4DA0C0068E995 /* GTListItem.m */; };
 		70BF614425E4E2E40068E995 /* GTNormalTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 70BF60D925E361000068E995 /* GTNormalTableViewCell.h */; };
 		70BF614525E4E2E40068E995 /* GTNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF60DA25E361000068E995 /* GTNormalTableViewCell.m */; };
+		70F11A8925F0976700EECD5B /* GTSlashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F11A8825F0976700EECD5B /* GTSlashView.m */; };
+		70F11AAD25F0B27500EECD5B /* libGTStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F11AAC25F0B27500EECD5B /* libGTStatic.a */; };
 		7D38B7DA6B15CFD4549DEE47 /* libPods-SampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E67906EE39AE6C81E81D51D /* libPods-SampleApp.a */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +56,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7023D32D25F0BBEA003A8FE6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7023D33525F0C112003A8FE6 /* GTFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5E67906EE39AE6C81E81D51D /* libPods-SampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7023D33025F0BED7003A8FE6 /* GTFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTFramework.framework; sourceTree = "<group>"; };
+		7023D33925F0C850003A8FE6 /* GTMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMineViewController.m; sourceTree = "<group>"; };
+		7023D33A25F0C850003A8FE6 /* GTMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMineViewController.h; sourceTree = "<group>"; };
+		7023D33E25F0D1D4003A8FE6 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		7023D34625F0D235003A8FE6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7023D35325F0D50B003A8FE6 /* GTLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLogin.m; sourceTree = "<group>"; };
+		7023D35425F0D50B003A8FE6 /* GTLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLogin.h; sourceTree = "<group>"; };
 		7028F26225EE236200AA1D03 /* GTVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoPlayer.h; sourceTree = "<group>"; };
 		7028F26325EE236200AA1D03 /* GTVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoPlayer.m; sourceTree = "<group>"; };
 		70585D3725E5F6A90071E900 /* GTMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMediator.h; sourceTree = "<group>"; };
@@ -90,6 +119,11 @@
 		70BF60F025E3A1040068E995 /* GTListLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListLoad.m; sourceTree = "<group>"; };
 		70BF612225E4DA0C0068E995 /* GTListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListItem.h; sourceTree = "<group>"; };
 		70BF612325E4DA0C0068E995 /* GTListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListItem.m; sourceTree = "<group>"; };
+		70F11A8725F0976700EECD5B /* GTSlashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTSlashView.h; sourceTree = "<group>"; };
+		70F11A8825F0976700EECD5B /* GTSlashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSlashView.m; sourceTree = "<group>"; };
+		70F11AAA25F0B27500EECD5B /* GTStatic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStatic.h; sourceTree = "<group>"; };
+		70F11AAB25F0B27500EECD5B /* GTStaticTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStaticTest.h; sourceTree = "<group>"; };
+		70F11AAC25F0B27500EECD5B /* libGTStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGTStatic.a; sourceTree = "<group>"; };
 		721CEAA3AD166D3179772B42 /* Pods-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7F7E7E18D78834B4B1618BC5 /* Pods-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +133,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70F11AAD25F0B27500EECD5B /* libGTStatic.a in Frameworks */,
+				7023D34825F0D23B003A8FE6 /* SystemConfiguration.framework in Frameworks */,
+				7023D34225F0D209003A8FE6 /* TencentOpenAPI.framework in Frameworks */,
 				7D38B7DA6B15CFD4549DEE47 /* libPods-SampleApp.a in Frameworks */,
+				7023D33425F0C112003A8FE6 /* GTFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +167,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7023D33825F0C82A003A8FE6 /* MineController */ = {
+			isa = PBXGroup;
+			children = (
+				7023D35425F0D50B003A8FE6 /* GTLogin.h */,
+				7023D35325F0D50B003A8FE6 /* GTLogin.m */,
+				7023D33A25F0C850003A8FE6 /* GTMineViewController.h */,
+				7023D33925F0C850003A8FE6 /* GTMineViewController.m */,
+			);
+			path = MineController;
+			sourceTree = "<group>";
+		};
 		707E0DF825CA556F0088B375 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +203,8 @@
 		707E0E0325CA556F0088B375 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				7023D33825F0C82A003A8FE6 /* MineController */,
+				70F11AA925F0B24D00EECD5B /* GTFramework */,
 				70B9B7C625ECDE4F00ED0568 /* VideoController */,
 				70BF60EB25E396680068E995 /* NewsController */,
 				70ABE0A225CBD6C700A665D8 /* icon.bundle */,
@@ -165,6 +216,8 @@
 				707E0E1625CA55700088B375 /* main.m */,
 				70BF60A025E0E3E70068E995 /* GTRecommendViewController.h */,
 				70BF60A125E0E3E70068E995 /* GTRecommendViewController.m */,
+				70F11A8725F0976700EECD5B /* GTSlashView.h */,
+				70F11A8825F0976700EECD5B /* GTSlashView.m */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -249,9 +302,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		70F11AA925F0B24D00EECD5B /* GTFramework */ = {
+			isa = PBXGroup;
+			children = (
+				7023D33E25F0D1D4003A8FE6 /* TencentOpenAPI.framework */,
+				7023D33025F0BED7003A8FE6 /* GTFramework.framework */,
+				70F11AAA25F0B27500EECD5B /* GTStatic.h */,
+				70F11AAB25F0B27500EECD5B /* GTStaticTest.h */,
+				70F11AAC25F0B27500EECD5B /* libGTStatic.a */,
+			);
+			path = GTFramework;
+			sourceTree = "<group>";
+		};
 		F6641F389B625634C8056A8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7023D34625F0D235003A8FE6 /* SystemConfiguration.framework */,
 				5E67906EE39AE6C81E81D51D /* libPods-SampleApp.a */,
 			);
 			name = Frameworks;
@@ -268,6 +334,7 @@
 				707E0DFD25CA556F0088B375 /* Sources */,
 				707E0DFE25CA556F0088B375 /* Frameworks */,
 				707E0DFF25CA556F0088B375 /* Resources */,
+				7023D32D25F0BBEA003A8FE6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -418,15 +485,18 @@
 				70B9B7CC25ECE10700ED0568 /* GTVideoCoverViewCollectionViewCell.m in Sources */,
 				70BF60C625E356FA0068E995 /* GTDetailViewController.m in Sources */,
 				70585D3925E5F6A90071E900 /* GTMediator.m in Sources */,
+				7023D35525F0D50B003A8FE6 /* GTLogin.m in Sources */,
 				707E0E0C25CA556F0088B375 /* GTNewsViewController.m in Sources */,
 				70BF612425E4DA0C0068E995 /* GTListItem.m in Sources */,
 				7028F26425EE236200AA1D03 /* GTVideoPlayer.m in Sources */,
 				707E0E0625CA556F0088B375 /* AppDelegate.m in Sources */,
+				7023D33B25F0C850003A8FE6 /* GTMineViewController.m in Sources */,
 				70BF60F125E3A1040068E995 /* GTListLoad.m in Sources */,
 				706A98C825EF1EA400BC4F7B /* GTVideoToolbar.m in Sources */,
 				707E0E1725CA55700088B375 /* main.m in Sources */,
 				70BF60A225E0E3E70068E995 /* GTRecommendViewController.m in Sources */,
 				70BF60E125E3644A0068E995 /* GTDeleteCellView.m in Sources */,
+				70F11A8925F0976700EECD5B /* GTSlashView.m in Sources */,
 				7085FB2F25DFA1A900C2049D /* GTVideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,10 +664,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98T72V82N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SampleApp/GTFramework",
+				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SampleApp/GTFramework",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = QQ.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -613,10 +691,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98T72V82N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SampleApp/GTFramework",
+				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SampleApp/GTFramework",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = QQ.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -20,33 +20,33 @@
     } 
     
     
-    NSString * urlString = @"http://v.juhe.cn/toutiao/index?type=top&key=97ad001bfcc2082e2eeaf798bad3d54e";
-    NSURL * listUrl = [NSURL URLWithString:urlString];
-    NSURLRequest * listRequest = [NSURLRequest requestWithURL:listUrl];
-    NSURLSession * session = [NSURLSession sharedSession];
-    
-    __weak typeof(self) weakSelf = self;
-    
-    NSURLSessionTask * dataTask = [session dataTaskWithRequest:listRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        __strong typeof(self) strongSelf = weakSelf;
-      id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSArray * dataArray = [[(NSDictionary *)jsonObj objectForKey:@"result"] objectForKey:@"data"];
-        NSMutableArray * listItemArray = [NSMutableArray array];
-        for (NSDictionary * info in dataArray) {
-            GTListItem * model = [GTListItem new];
-            [model configWithDictionary:info];
-            [listItemArray addObject:model];
-        }
-        [strongSelf archiveListDataWithArray:listItemArray.copy];
+//    NSString * urlString = @"http://v.juhe.cn/toutiao/index?type=top&key=97ad001bfcc2082e2eeaf798bad3d54e";
+//    NSURL * listUrl = [NSURL URLWithString:urlString];
+//    NSURLRequest * listRequest = [NSURLRequest requestWithURL:listUrl];
+//    NSURLSession * session = [NSURLSession sharedSession];
+//
+//    __weak typeof(self) weakSelf = self;
+//
+//    NSURLSessionTask * dataTask = [session dataTaskWithRequest:listRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        __strong typeof(self) strongSelf = weakSelf;
+//      id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//        NSArray * dataArray = [[(NSDictionary *)jsonObj objectForKey:@"result"] objectForKey:@"data"];
+//        NSMutableArray * listItemArray = [NSMutableArray array];
+//        for (NSDictionary * info in dataArray) {
+//            GTListItem * model = [GTListItem new];
+//            [model configWithDictionary:info];
+//            [listItemArray addObject:model];
+//        }
+//        [strongSelf archiveListDataWithArray:listItemArray.copy];
+//
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            if (finish) {
+//                finish(error == nil,listItemArray.copy);
+//            }
+//        });
+//    }];
 
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (finish) {
-                finish(error == nil,listItemArray.copy);
-            }
-        });
-    }];
-
-    [dataTask resume];
+//    [dataTask resume];
 }
 
 

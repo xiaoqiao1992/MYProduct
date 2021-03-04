@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		dJsXuiHb+8wzWs4bcdaESEDV/BI=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
 		ZrWRSixvbdOUUxWCVAEAxVfY0kM=
@@ -16,9 +20,21 @@
 		<data>
 		LpaNfCTMH1KYpLmldGA5gS03Ws4=
 		</data>
+		<key>Frameworks/GTFramework.framework/GTFramework</key>
+		<data>
+		4rdrmqLFnQq1l4ogpE4J3qydDdQ=
+		</data>
+		<key>Frameworks/GTFramework.framework/Info.plist</key>
+		<data>
+		vCqtR6Zo0028604BGargvKgjhUw=
+		</data>
+		<key>Frameworks/GTFramework.framework/_CodeSignature/CodeResources</key>
+		<data>
+		Rs7gWEnAGgWEz6NQPsV2kx45xRQ=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		rUB0r1j7osqmhrk4tHYosg250D0=
+		hEeKysDjDy2U5dOAZJ7YHSxuW6Y=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -67,6 +83,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qpgCh/StMIfovM/4JKXT4yO36cYgBYEoYs8mqAPNEes=
+			</data>
+		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -86,6 +109,27 @@
 			<key>hash2</key>
 			<data>
 			0UEY8EI681KcJJ9sQ5+z8dzm9MXWS85sXLJqXPYb9Ag=
+			</data>
+		</dict>
+		<key>Frameworks/GTFramework.framework/GTFramework</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			iCoJKyPLRRfJ5EqrTDrtTQ5devP22CRsuWiOpWB/py4=
+			</data>
+		</dict>
+		<key>Frameworks/GTFramework.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6HgYRIYw0VF6uCDY9gSbxPnjBmz2dd3ndEv14SlOsiM=
+			</data>
+		</dict>
+		<key>Frameworks/GTFramework.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			g24FQ0j/+7lNaw8ctuvDH2GNuazDqe9cNXy1AsLVnAI=
 			</data>
 		</dict>
 		<key>icon.bundle/home@2x.png</key>

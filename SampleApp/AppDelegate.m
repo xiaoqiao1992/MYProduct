@@ -9,6 +9,10 @@
 #import "GTNewsViewController.h"
 #import "GTVideoViewController.h"
 #import "GTRecommendViewController.h"
+#import "GTMineViewController.h"
+#import "GTSlashView.h"
+#import "GTStatic.h"
+#import <GTFramework/GTFramework.h>
 
 @interface AppDelegate ()
 
@@ -34,18 +38,30 @@
     GTRecommendViewController * recommendController = [GTRecommendViewController new];
     
     
-    UIViewController * controller4 = [UIViewController new];
-    controller4.view.backgroundColor = [UIColor blueColor];
-    controller4.tabBarItem.title = @"我的";
-    controller4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
-    controller4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
-    [tabbarController setViewControllers:@[VC,controller2,recommendController,controller4]];
+    GTMineViewController * mineController = [GTMineViewController new];
+    
+    
+    [tabbarController setViewControllers:@[VC,controller2,recommendController,mineController]];
  
     UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
     self.window.rootViewController = navigationController;
     [self.window makeKeyWindow];
+    
+    
+    [self.window.rootViewController.view addSubview:({
+        GTSlashView * slashView = [[GTSlashView alloc] initWithFrame:CGRectMake(0, 0, self.window.bounds.size.width, self.window.bounds.size.height)];
+        slashView;
+    })];
+    
+    //static
+    //[[GTStatic alloc] init]
+    
     return YES;
 }
+
+
+#pragma mark -url
+
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options{
     NSLog(@"");
     return YES;
